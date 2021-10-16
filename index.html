@@ -1,5 +1,11 @@
 <script type="text/javascript">
-    const name = prompt('Điền tên bạn');
+    var name = prompt('Điền tên bạn');
+    
+    if(name === ''){
+        const rndInt = Math.floor(Math.random() * 99999) + 1
+    
+        name = "Ẩn danh " + rndInt;
+    }
 </script>
 <div class="chat_window">
     <div class="top_menu">
