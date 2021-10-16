@@ -10,3 +10,5 @@ or install nodejs and run
 ##DEMO 
 
 https://anonymouschatvha.herokuapp.com/
+
+<img src='https://imgur.com/jXoIswK'>
