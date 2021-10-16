@@ -11,4 +11,4 @@ or install nodejs and run
 
 https://anonymouschatvha.herokuapp.com/
 
-<img src='https://imgur.com/jXoIswK'>
+<img src='https://i.imgur.com/jXoIswK_d.webp?maxwidth=760&fidelity=grand'>
