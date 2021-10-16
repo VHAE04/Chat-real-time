@@ -2,7 +2,7 @@ How to use
 =========
 
 
-Step deploy in heroku 
+Deploy in heroku 
 
 or install nodejs and run 
 ```npm start```
