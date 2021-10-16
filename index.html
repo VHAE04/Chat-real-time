@@ -156,7 +156,7 @@ socket.on('user-chat', (datave) => {
     ic = /"/g;
     datave.message = datave.message.toString().replace(lt, "&lt;").replace(gt, "&gt;").replace(ap, "&#39;").replace(ic, "&#34;");
 
-
+    datave.name = datave.name.toString().replace(lt, "&lt;").replace(gt, "&gt;").replace(ap, "&#39;").replace(ic, "&#34;");
 
 
     ///////////////////////////////////////////////////
