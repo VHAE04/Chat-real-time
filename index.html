@@ -1,0 +1,60 @@
+
+<script type="text/javascript">
+	const name = prompt('Điền tên bạn');
+</script>
+<body>
+	<h1>App chat demo vhae</h1>
+	<ul id="khungchat"></ul>
+	<form id="chat-form">
+		<input type="text" id="tinnhan">
+		<button id="gui">gui</button>
+		
+	</form>
+
+
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+
+
+
+
+  const chatForm = document.querySelector('#chat-form');
+  const tinnhan = document.querySelector('#tinnhan');
+
+  chatForm.addEventListener('submit', (e) => {
+  	e.preventDefault();
+  		const message = tinnhan.value;
+  		socket.emit('on-chat' , {
+  			name,
+  			message
+  		})
+  		 tinnhan.value = '';
+  });
+
+const khungchat = document.querySelector('#khungchat');
+
+socket.on('user-chat', (datave) => {
+	const chatitem = document.createElement('p');
+
+
+
+	///////////////////////////////////////////////////
+	chatitem.innerHTML = datave.name+": "+datave.message;
+	//fix xss
+	///////////////////////////////////////////////////
+
+	
+	//chatitem.textContent = datave.name+": "+datave.message;
+
+
+	khungchat.appendChild(chatitem);
+});
+
+</script>
+
+
+</body>
