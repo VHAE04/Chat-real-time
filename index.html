@@ -8,7 +8,7 @@
             <div class="button minimize"></div>
             <div class="button maximize"></div>
         </div>
-        <div class="title">VHAE [VI] - Số người online là <span id="count">?</span></div>
+        <div class="title">VHAE [VI] - Số người online là : <span id="count">?</span></div>
     </div>
     <ul id="khungchat" class="messages">
       
@@ -17,7 +17,7 @@
             <div class="text_wrapper">
                 <div class="text">
 				
-	Cuộc hội thoại 1 chiều sad :()
+	Cuộc hội thoại này sẽ không được lưu :()
 				
 				</div>
             </div>
@@ -70,7 +70,7 @@ const chatitemr = document.createElement('p');
 
 
 
-chatitemr.innerHTML = `<li class="message right appeared"><div class="avatar"></div><div class="text_wrapper"><div class="text">                                `+name+": "+messager+`              </div>             </div>         </li>`;
+chatitemr.innerHTML = `<li class="message right appeared"><div class="avatar"></div><div class="text_wrapper"><div class="text">                                `+"<span id='name1'>"+name+'</span>'+": "+messager+`              </div>             </div>         </li>`;
 
 khungchat.appendChild(chatitemr);
 
@@ -113,7 +113,7 @@ form.addEventListener('click', (e) => {
 
 
 
-chatitemrr.innerHTML = `<li class="message right appeared"><div class="avatar"></div><div class="text_wrapper"><div class="text">                                `+name+": "+messagerr+`              </div>             </div>         </li>`;
+chatitemrr.innerHTML = `<li class="message right appeared"><div class="avatar"></div><div class="text_wrapper"><div class="text">                                `+"<span id='name1'>"+name+'</span>'+": "+messagerr+`              </div>             </div>         </li>`;
 
 khungchat.appendChild(chatitemrr);
 
@@ -154,7 +154,7 @@ socket.on('user-chat', (datave) => {
 
 
     ///////////////////////////////////////////////////
-    chatitem.innerHTML = `<li class="message left appeared"><div class="avatar"></div><div class="text_wrapper"><div class="text">                                `+datave.name+": "+datave.message+`              </div>             </div>         </li>`;
+    chatitem.innerHTML = `<li class="message left appeared"><div class="avatar"></div><div class="text_wrapper"><div class="text">                                `+"<span id='name1'>"+datave.name+'</span>'+": "+datave.message+`              </div>             </div>         </li>`;
     //fix xss
     ///////////////////////////////////////////////////
 
@@ -192,6 +192,14 @@ socket.on('user-chat', (datave) => {
 
 
 <style>
+    #name1{
+        
+        font-weight: bold;
+    }
+    #count{
+        color: #7abf18;
+        font-weight: bold;
+    }
     * {
         box-sizing: border-box;
     }
