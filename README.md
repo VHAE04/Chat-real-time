@@ -9,4 +9,4 @@ or install nodejs and run
 
 ##DEMO 
 
-https://testchatvhae.herokuapp.com
+https://anonymouschatvha.herokuapp.com/
